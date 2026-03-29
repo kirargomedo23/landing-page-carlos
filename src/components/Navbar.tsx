@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'py-4 glass rounded-none border-t-0 border-x-0 bg-opacity-70 backdrop-blur-md' : 'py-6 bg-transparent'
       }`}>
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-around md:justify-between h-full">
         <div className="text-2xl font-bold tracking-tighter text-white">
           CARLOS<span className="text-primary">GIL</span>
         </div>

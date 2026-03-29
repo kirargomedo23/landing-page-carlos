@@ -52,6 +52,15 @@ ul {
   list-style: none;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
@@ -146,8 +155,16 @@ section {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
 }
 
 .grid {

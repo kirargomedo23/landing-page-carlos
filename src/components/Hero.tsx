@@ -3,16 +3,11 @@ import { Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="min-h-screen relative flex items-center overflow-hidden pt-32 pb-20 md:py-40">
+    <section id="inicio" className="min-h-screen relative flex items-center overflow-hidden pt-32 pb-20 md:py-40 bg-black">
       {/* Background with Gradient and Carlos Image */}
       <div className="absolute top-0 right-0 w-full md:w-[50%] h-full z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker/60 to-transparent z-10 md:block hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-transparent to-transparent z-10 md:hidden" />
-        <img
-          src="/assets/carlos_hero.png"
-          alt="Carlos Gil Hero"
-          className="w-full h-full object-cover object-[center_15%] opacity-80 md:opacity-100 transform scale-125 md:scale-110 origin-top"
-        />
         <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-bg-darker to-transparent z-10" />
       </div>
 
