@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Video, Mic2, Megaphone, Target, ArrowRight } from 'lucide-react';
+import { Video, Mic2, Megaphone, Target } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description, delay }: { icon: any; title: string; description: string; delay: number }) => (
   <motion.div
