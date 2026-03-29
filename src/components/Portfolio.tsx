@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Music2, ExternalLink, Play } from 'lucide-react';
 // Important for Vite/React: Import local assets to let Vite resolve the URL correctly
 import punoImg from '../assets/images/puno.jpg';
+import fabricaImg from '../assets/images/fabrica.png';
+
 
 const PortfolioItem = ({ type, title, views, link, image }: { type: 'tiktok' | 'youtube'; title: string; views: string; link: string; image: string }) => (
   <motion.div
@@ -54,7 +56,7 @@ const Portfolio = () => {
   ];
 
   const youtubeVideos = [
-    { title: 'Sausal: La ex fábrica de azucar', views: '900+', link: 'https://www.youtube.com/watch?v=_2DusUWqNtQ', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200' },
+    { title: 'Sausal: La ex fábrica de azúcar', views: '900+', link: 'https://www.youtube.com/watch?v=_2DusUWqNtQ', image: fabricaImg },
     { title: 'Sausal, Tierra del Eterno Sol', views: '200+', link: 'https://www.youtube.com/watch?v=vQgzcfRX6Ao', image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1200' },
   ];
 

@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion';
-import { Download, MessageCircle } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 const Hero = () => {
   return (
     <section id="inicio" className="min-h-screen relative flex items-center overflow-hidden pt-32 pb-20 md:py-40">
       {/* Background with Gradient and Carlos Image */}
-      <div className="absolute top-0 right-0 w-full md:w-[50%] h-full z-0 pointer-events-none">
+      <div className="absolute top-0 right-0 w-full md:w-[50%] h-full z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker/60 to-transparent z-10 md:block hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-transparent to-transparent z-10 md:hidden" />
         <img
           src="/assets/carlos_hero.png"
           alt="Carlos Gil Hero"
-          className="w-full h-full object-cover object-[top_center] opacity-80 md:opacity-100"
+          className="w-full h-full object-cover object-[center_15%] opacity-80 md:opacity-100 transform scale-125 md:scale-110 origin-top"
         />
-        <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-bg-darker to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-bg-darker to-transparent z-10" />
       </div>
 
       <div className="container relative z-20">
@@ -48,15 +48,6 @@ const Hero = () => {
                 <Download size={20} className="group-hover:animate-bounce" />
                 Descargar mi CV
               </a>
-              <a
-                href="https://wa.me/yournumber" // Replace with actual number if provided
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary border-primary/50 group"
-              >
-                <MessageCircle size={20} className="group-hover:text-primary" />
-                Contactar Colaboraciones
-              </a>
             </div>
           </motion.div>
 
@@ -68,15 +59,11 @@ const Hero = () => {
             className="grid grid-cols-3 gap-8 mt-16 border-l border-glass-border pl-8"
           >
             <div>
-              <div className="text-3xl font-bold text-white">+100k</div>
-              <div className="text-sm text-text-gray uppercase tracking-widest">Seguidores</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white">+1M</div>
+              <div className="text-3xl font-bold text-white">+1K</div>
               <div className="text-sm text-text-gray uppercase tracking-widest">Reproducciones</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">+5 años</div>
+              <div className="text-3xl font-bold text-white">+3 años</div>
               <div className="text-sm text-text-gray uppercase tracking-widest">Experiencia</div>
             </div>
           </motion.div>
