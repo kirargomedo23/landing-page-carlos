@@ -45,6 +45,18 @@ const Socials = () => {
       link: 'https://www.facebook.com/carlosgilmonzon',
       handle: 'Carlos Gil Monzon'
     },
+    {
+      name: 'Gmail',
+      icon: ({ size, ...props }: any) => (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
+          <path d="M22 4H2v16h20V4zm0 2v12H2V6h20zm-2 0l-8 5.25L4 6h16z" />
+        </svg>
+      ),
+      color: '#ea4335',
+      link: 'mailto:[EMAIL_ADDRESS]',
+      handle: 'Gilmoncarlosjose@gmail.com'
+    }
+
   ];
 
   return (
