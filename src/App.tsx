@@ -1,8 +1,12 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Philosophy from './components/Philosophy';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Clients from './components/Clients';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Socials from './components/Socials';
 import Footer from './components/Footer';
 
@@ -13,8 +17,12 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Portfolio />
+        <Philosophy />
         <Services />
+        <Portfolio />
+        <Clients />
+        <Skills />
+        <Experience />
         <Socials />
       </main>
       <Footer />

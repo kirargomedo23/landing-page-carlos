@@ -1,66 +1,83 @@
 import { motion } from 'framer-motion';
+import { Target, Eye, ShieldCheck, Heart, Sparkles } from 'lucide-react';
 
 const About = () => {
-  return (
-    <section id="sobre-mi" className="relative pb-24 lg:pb-32 overflow-hidden">
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+  const values = [
+    { icon: Heart, text: 'Autenticidad' },
+    { icon: Target, text: 'Humanidad' },
+    { icon: Sparkles, text: 'Creatividad funcional' },
+    { icon: ShieldCheck, text: 'Compromiso' },
+    { icon: Sparkles, text: 'Profesionalismo' },
+  ];
 
-          {/* Text Content */}
+  return (
+    <section id="sobre-mi" className="relative  overflow-hidden">
+      <div className="container px-4 mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          {/* Theory / ADN */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <span className="w-12 h-1 bg-primary rounded-full" />
-              <span className="text-secondary font-bold tracking-widest uppercase text-sm">Mi Historia</span>
+              <span className="text-secondary font-bold tracking-widest uppercase text-sm">ADN DE COMUNICARL'S</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Mi Pasión por <span className="text-primary italic">Contar Historias</span>
-            </h2>
-
-            <div className="space-y-6 text-xl text-text-gray leading-relaxed">
-              <p>
-                Como Comunicador Social, mi misión siempre ha sido clara: ser el puente entre las realidades locales y el eco global. Formado con la convicción de que cada voz merece ser escuchada, he dedicado mi carrera a explorar nuevas narrativas digitales.
-              </p>
-              <p>
-                Mi amor por mi pueblo no es solo nostalgia; es mi motor personal. Mi mayor deseo es visibilizar las riquezas, los talentos y las historias del lugar que me vio crecer, convirtiendo lo cotidiano en contenido viral que impacte y conecte corazones.
-              </p>
-              <p className="font-semibold text-white italic border-l-4 border-primary pl-6 py-2">
-                "No solo reporto noticias; capturo la esencia de lo que nos hace únicos."
-              </p>
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
+                  <Target className="text-primary" /> Misión
+                </h3>
+                <p className="text-lg text-text-gray leading-relaxed">
+                  Elevar la comunicación de las marcas a un nivel donde la <span className="text-white font-semibold">autenticidad sea puente</span>, la creatividad sea voz y las personas se sientan realmente escuchadas. Diseño mensajes que no solo informan: transforman, conectan y permanecen.
+                </p>
+              </div>
+              <br />
+              <div>
+                <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
+                  <Eye className="text-primary" /> Visión
+                </h3>
+                <p className="text-lg text-text-gray leading-relaxed">
+                  Ser un referente en comunicación humana y contenido con sentido, liderando un estilo donde las historias construyan confianza y las marcas encuentren una forma <span className="text-white font-semibold italic">más sensible y real</span> de conectar con su público.
+                </p>
+              </div>
+            </div>
+            <br />
+            <div className="grid grid-cols-2 gap-4">
+              {values.map((v, i) => (
+                <div key={i} className="flex items-center gap-3 p-4 glass rounded-xl border-glass-border hover:border-primary/50 transition-colors">
+                  <v.icon size={18} className="text-primary" />
+                  <span className="text-sm font-semibold">{v.text}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
 
-          {/* BTS Image Card */}
+          {/* Image & Values */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative order-1 lg:order-2"
+            className="space-y-10"
           >
-            <div className="relative z-10 glass p-3 ring-1 ring-glass-border">
+            <div className="relative glass p-4 ring-1 ring-glass-border overflow-hidden">
               <img
                 src="/assets/carlos_bts.jpg"
-                alt="Carlos Gil en acción"
-                className="w-full h-[500px] object-cover rounded-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700"
+                alt="Carlos Gil"
+                className="w-full h-[400px] object-cover rounded-2xl"
               />
-              <div className="absolute -bottom-4 -right-4 glass p-4 border-primary/20 bg-white/5 backdrop-blur-xl shadow-2xl hidden md:block z-20">
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-3xl font-bold text-primary">100%</span>
-                  <span className="text-[10px] text-text-gray uppercase tracking-widest font-bold">Autenticidad</span>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-darker/80 to-transparent" />
+              <div className="  bottom-10 left-10 right-10">
+                <p className="text-2xl font-bold text-white italic">
+                  "Comunicar con estilo, frescura y propósito."
+                </p>
               </div>
             </div>
-
-            {/* Background elements */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary opacity-20 blur-3xl rounded-full" />
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary opacity-10 blur-3xl rounded-full" />
           </motion.div>
         </div>
       </div>

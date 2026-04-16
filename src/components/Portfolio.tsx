@@ -3,6 +3,8 @@ import { Music2, ExternalLink, Play } from 'lucide-react';
 // Important for Vite/React: Import local assets to let Vite resolve the URL correctly
 import punoImg from '../assets/images/puno.jpg';
 import fabricaImg from '../assets/images/fabrica.png';
+import sausalImg from '../assets/images/sausal.jpg';
+
 
 
 const PortfolioItem = ({ type, title, views, link, image }: { type: 'tiktok' | 'youtube'; title: string; views: string; link: string; image: string }) => (
@@ -50,7 +52,7 @@ const PortfolioItem = ({ type, title, views, link, image }: { type: 'tiktok' | '
 
 const Portfolio = () => {
   const tiktokVideos = [
-    { title: 'Sausal, Tierra del Eterno Sol', views: '10K+', link: 'https://www.tiktok.com/@comunicarls/video/7543314094368017672', image: 'https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/523950759_732904473040603_483563725428838992_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=sZTNtJtsehQQ7kNvwF-RutC&_nc_oc=AdpOZ85IDbRnkDWSwPvqMTOkpvIJ1B-mifxutRoepusAPPz0X6qtFMfsSe1SYbgu9aI&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=UiulNh6u861kk3ZnONVpRg&_nc_ss=7a32e&oh=00_AfwMcVMj9LQWNbOuV9vmZtHAAWrai0BAEEqQ8ATEBrZibg&oe=69CF08D0' },
+    { title: 'Sausal, Tierra del Eterno Sol', views: '10K+', link: 'https://www.tiktok.com/@comunicarls/video/7543314094368017672', image: sausalImg },
     { title: 'Puno', views: '10K+', link: 'https://www.tiktok.com/@comunicarls', image: punoImg },
     { title: 'Machu Picchu', views: '10K+', link: 'https://www.tiktok.com/@comunicarls/video/7513308715336994053', image: 'https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
   ];
